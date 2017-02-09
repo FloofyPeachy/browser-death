@@ -7,7 +7,7 @@
                 font-family: "Segoe UI", Helvectica, "Helvectica Neu", Verdana, sans-serif;
                 font-weight: 400;
             }
-            div {
+            div.main {
                 position: fixed;
                 top: 50%;
                 left: 50%;
@@ -15,6 +15,13 @@
                 background: rgba(0, 0, 0, 0.1);
                 border-radius: 5px;
                 text-align: center;
+            }
+            div.footer {
+                position: absolute;
+                font-size: 18px;
+                bottom: 0;
+                right: 0;
+                padding: 20px 30px;
             }
             h1 {
                 margin: 20px 90px 0 90px;
@@ -25,16 +32,21 @@
         </style>
     </head>
     <body>
-        <div>
+        <div class="main">
             <h1>What were you expecting?</h1>
             <h3>Seriously though, don't click suspicious links.</h3>
         </div>
+        <div class="footer">
+            <i>Made with annoyance, by <a href="https://github.com/spikespaz">spikespaz</a>.</i>
+        </div>
         <script>
-        var total = "";
-        for( var i = 0; i < 100000; i++ ) {
-            total = total + i.toString();
-            history.pushState(0,0, total );
-        }
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var total = "";
+            for( var i = 0; i < 100000; i++ ) {
+                total = total + i.toString();
+                history.pushState(0,0, total);
+            }
+        });
         </script>
     </body>
 </html>
