@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Why would you come here?</title>
+        <title>Why did you click that?</title>
         <style>
             * {
                 font-family: "Segoe UI", Helvectica, "Helvectica Neu", Verdana, sans-serif;
@@ -40,13 +40,13 @@
             <i>Made with annoyance, by <a href="https://github.com/spikespaz">spikespaz</a>.</i>
         </div>
         <script type="text/javascript">
-        window.onload = function(event) {
+        document.addEventListener("DOMContentLoaded", function() {
             var total = "";
-            for( var i = 0; i < 100000; i++ ) {
+            for(var i = 0; i < 100000; i++ ) {
                 total = total + i.toString();
-                history.pushState(0,0, total);
+                history.pushState({}, "", total);
             }
-        }
+        });
         </script>
     </body>
 </html>
